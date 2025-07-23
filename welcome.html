@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <style>
+        body {
+            background:color(srgb rgb(112, 79, 79) rgb(132, 183, 201) rgb(0, 0, 0));
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 99vw;
+            min-height: 99vh;
+            background: rgba(141, 205, 202, 0.533);
+            padding: 60px 0 40px 0;
+            border-radius: 0;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .header-top {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            display: flex;
+            gap: 18px;
+            z-index: 10;
+        }
+        h1 {
+            color: red;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .social {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .social a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #222;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .social a:hover {
+            color: #c0392b;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 40px 0;
+        }
+        .img-box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .img-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .img-box:hover {
+            transform: scale(1.05);
+        }
+        .img-actions {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            display: flex;
+            gap: 8px;
+        }
+        .img-actions button {
+            padding: 2px 7px;
+            border: none;
+            border-radius: 4px;
+            background: #000;      /* Black background */
+            color: #fff;
+            cursor: pointer;
+            font-size: 11px;
+            transition: background 0.2s;
+        }
+        .img-actions button:hover {
+            background: #333;      /* Darker black on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="website.html" title="Back" style="position:absolute; top:24px; left:24px;">
+            <img src="14667293.png" alt="Back" style="width:40px; height:40px; border-radius:50%; box-shadow:0 2px 8px #0002;">
+        </a>
+        <div style="flex:1"></div>
+        <div class="gallery">
+            <div class="img-box">
+                <img src="e-1024x576.webp" alt="Photo 1">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="e-1024x576.webp" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="1736425093942_MSdhonistats.webp" alt="Photo 4">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="1736425093942_MSdhonistats.webp" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="76829108.webp" alt="Photo 5">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="76829108.webp" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="MS-Dhoni-1-800x600.webp" alt="Photo 6">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="MS-Dhoni-1-800x600.webp" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="Wicketkeeping_kit_and_bat_of_MS_Dhoni_at_Blades_of_Glory_Cricket_Museum,_Pune.webp" alt="Photo 7">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="Wicketkeeping_kit_and_bat_of_MS_Dhoni_at_Blades_of_Glory_Cricket_Museum,_Pune.webp" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="HD-wallpaper-cricket-match-ms-dhoni-celebrates-winning-mahi-cricketer-thumbnail.webp" alt="Photo 2">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="HD-wallpaper-cricket-match-ms-dhoni-celebrates-winning-mahi-cricketer-thumbnail.webp" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="HD-wallpaper-sachin-tendulkar-sachin-tendulkar-team-india-sports-cricket-legend-indian-cricket-god-of-cricket-india-thumbnail.webp" alt="Photo 5">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="HD-wallpaper-sachin-tendulkar-sachin-tendulkar-team-india-sports-cricket-legend-indian-cricket-god-of-cricket-india-thumbnail.webp" download><button>Download</button></a>
+                </div>
+            </div>
+              <div class="img-box">
+                <img src="HD-wallpaper-indian-cricket-team-cricket-dhoni-indian-ms-the-virat-kohli-you-thumbnail.webp" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="HD-wallpaper-indian-cricket-team-cricket-dhoni-indian-ms-the-virat-kohli-you-thumbnail.webp" download><button>Download</button></a>
+                </div>
+            </div>
+              <div class="img-box">
+                <img src="IMG_20250723_234956_700.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234956_700.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250723_234956_751.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234956_751.jpg" download><button>Download</button></a>
+                </div>
+            </div> <div class="img-box">
+                <img src="IMG_20250723_234956_758.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234956_758.jpg" download><button>Download</button></a>
+                </div>
+            </div> <div class="img-box">
+                <img src="IMG_20250723_234956_867.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234956_867.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="IMG_20250723_234956_993.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234956_993.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+            <div class="img-box">
+                <img src="HD-wallpaper-england-cricket-ben-stokes-player-cricketer-thumbnail.webp" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="HD-wallpaper-england-cricket-ben-stokes-player-cricketer-thumbnail.webp" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250723_234957_054.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234957_054.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250723_234957_060.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234957_060.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250723_234957_124.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234957_124.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250723_234957_266.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250723_234957_266.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250724_002412_083.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250724_002412_083.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+             <div class="img-box">
+                <img src="IMG_20250724_002429_262.jpg" alt="Photo 3">
+                <div class="img-actions">
+                    <button onclick="zoomIn(this)">Zoom In</button>
+                    <button onclick="zoomOut(this)">Zoom Out</button>
+                    <a href="IMG_20250724_002429_262.jpg" download><button>Download</button></a>
+                </div>
+            </div>
+           
+            <center>
+                <footer>
+    <script>
+        function zoomIn(btn) {
+            const img = btn.closest('.img-box').querySelector('img');
+            let scale = img.dataset.scale ? parseFloat(img.dataset.scale) : 1;
+            scale += 0.2;
+            img.style.transform = `scale(${scale})`;
+            img.dataset.scale = scale;
+        }
+        function zoomOut(btn) {
+            const img = btn.closest('.img-box').querySelector('img');
+            let scale = img.dataset.scale ? parseFloat(img.dataset.scale) : 1;
+            scale = Math.max(1, scale - 0.2);
+            img.style.transform = `scale(${scale})`;
+            img.dataset.scale = scale;
+        }
+    </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 18px;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 24px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #00acee; /* Hover color */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bottom-content">
+    <!-- Your website content here -->
+  </div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/19bM7t4qSA/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/razputpawan_?igsh=MWN4bG5iNjRzcGd2ZQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/PawanSingh89786?s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com/@erenyeager_678?si=Fg7y3V_mmEIQ4JSi" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
+  </footer>
+  <div class="bottom-content"></div>
+<center>
+</body>
+</html>
